@@ -3,7 +3,11 @@ import prisma from "@/src/prisma/core";
 
 export async function GET() {
   try {
-    const documents = await prisma.document.findMany();
+    const documents = await prisma.document.findMany({
+      orderBy: {
+        updatedAt: "desc",
+      },
+    });
 
     return NextResponse.json({
       message: "GET request successful",
