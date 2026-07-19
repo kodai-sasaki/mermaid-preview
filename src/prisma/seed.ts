@@ -9,7 +9,7 @@ async function main() {
     },
     {
       title: "Another Document",
-      body: "mindmap \n  root((Mindmap))\n    Origins\n      Long history\n      ::icon(fa fa-book)\n      Popularisation\n        British popular psychology author Tony Buzan\n    Research\n      On effectivness\n      On memorisation\n    Tools\n      Pen and paper\n      ::icon(fa fa-pencil)\n      Digital tools\n        ::icon(fa fa-desktop)\n        Mind map software",
+      body: "mindmap\n  root((Mindmap))\n    Origins\n      Long history\n      ::icon(fa fa-book)\n      Popularisation\n        British popular psychology author Tony Buzan\n    Research\n      On effectivness\n      On memorisation\n    Tools\n      Pen and paper\n      ::icon(fa fa-pencil)\n      Digital tools\n        ::icon(fa fa-desktop)\n        Mind map software",
     },
   ];
 

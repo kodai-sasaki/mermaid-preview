@@ -12,7 +12,6 @@ export const Page = async ({
   return (
     <Suspense>
       <Preview id={id} />
-      <textarea>{}</textarea>
     </Suspense>
   );
 };
