@@ -1,0 +1,29 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USER: root
+      DATABASE_PASSWORD: password
+      DATABASE_NAME: mermaid_preview
+    depends_on:
+      - db
+  db:
+    image: postgres:13
+    ports:
+      - "65432:5432"
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mermaid_preview
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
