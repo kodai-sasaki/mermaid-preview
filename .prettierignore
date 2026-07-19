@@ -1,0 +1,40 @@
+# --- Build Artifacts & Outputs ---
+.next/
+out/
+build/
+dist/
+coverage/
+
+# --- Dependency Directories ---
+node_modules/
+
+# --- Environment & Local Files ---
+.env*.local
+.pnpm-store/
+.yarn/
+
+# --- Next.js / TypeScript Auto-generated Files ---
+next-env.d.ts
+.tsbuildinfo
+
+# --- Static Assets ---
+public/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.webp
+*.mp4
+*.woff
+*.woff2
+
+# --- Configuration Locks ---
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# prisma の自動生成ファイル
+src/prisma/generated/

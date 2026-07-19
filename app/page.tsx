@@ -1,5 +1,5 @@
-import { Home } from '@/src/page/home';
-import { Suspense } from 'react';
+import { Home } from "@/src/page/home";
+import { Suspense } from "react";
 
 export const Page = async () => {
   return (
@@ -7,6 +7,6 @@ export const Page = async () => {
       <Home />
     </Suspense>
   );
-}
+};
 
 export default Page;

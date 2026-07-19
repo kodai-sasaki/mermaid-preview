@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Document } from '@/src/prisma/generated/browser';
+import { Document } from "@/src/prisma/generated/browser";
 
 export const Home = () => {
   const [mermaids, setMermaids] = useState<Document[]>([]);
@@ -26,4 +26,4 @@ export const Home = () => {
       </ul>
     </div>
   );
-}
+};

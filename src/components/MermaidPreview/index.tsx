@@ -1,7 +1,7 @@
 "use client";
 
-import mermaid from "mermaid"
-import React from "react"
+import mermaid from "mermaid";
+import React from "react";
 
 export const MermaidPreview = ({ code }: { code: string }) => {
   const outputRef = React.useRef<HTMLDivElement>(null);

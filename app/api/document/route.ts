@@ -1,23 +1,23 @@
-import { NextRequest, NextResponse } from 'next/server';
-import prisma from '@/src/prisma/core';
+import { NextRequest, NextResponse } from "next/server";
+import prisma from "@/src/prisma/core";
 
 export async function GET(request: NextRequest) {
   try {
-    const id = request.nextUrl.searchParams.get('id');
+    const id = request.nextUrl.searchParams.get("id");
     const document = await prisma.document.findUnique({
       where: { id: Number(id) },
     });
     if (!document) {
       return NextResponse.json(
-        { error: 'Document not found' },
-        { status: 404 }
+        { error: "Document not found" },
+        { status: 404 },
       );
     }
     return NextResponse.json(document);
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500 },
     );
   }
 }
@@ -31,13 +31,13 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { message: 'POST request successful', data: newDocument },
-      { status: 201 }
+      { message: "POST request successful", data: newDocument },
+      { status: 201 },
     );
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500 },
     );
   }
 }
@@ -52,13 +52,13 @@ export async function PUT(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { message: 'PUT request successful', data: updatedDocument },
-      { status: 200 }
+      { message: "PUT request successful", data: updatedDocument },
+      { status: 200 },
     );
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500 },
     );
   }
 }

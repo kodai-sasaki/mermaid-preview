@@ -28,7 +28,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "src/registry/model/mermaid.prisma"  ],
+    "**/*.mts",
+    "src/registry/model/mermaid.prisma"
+  ],
   "exclude": ["node_modules"]
 }
