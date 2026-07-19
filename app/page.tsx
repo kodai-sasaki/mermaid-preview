@@ -1,5 +1,12 @@
-export default function Home() {
+import { Home } from '@/src/page/home';
+import { Suspense } from 'react';
+
+export const Page = async () => {
   return (
-    <div>TEST</div>
+    <Suspense>
+      <Home />
+    </Suspense>
   );
 }
+
+export default Page;

@@ -6,8 +6,12 @@ datasource db {
   provider = "postgresql"
 }
 
-model Mermaid {
+model Document {
   id    Int     @id @default(autoincrement())
   title  String
   body  String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("documents")
 }
