@@ -2,7 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "8080:3000"
+      - "3000:3000"
     volumes:
       - .:/app
       - /app/node_modules
@@ -18,7 +18,7 @@ services:
   db:
     image: postgres:13
     ports:
-      - "65432:5432"
+      - "5432:5432"
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: password

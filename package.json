@@ -8,12 +8,15 @@
     "start": "next start",
     "lint": "eslint",
     "format": "prettier --write .",
+    "mcp:dev": "pnpm exec tsx scripts/mcp-server.ts",
+    "mcp:smoke": "NEXTJS_API_URL=http://localhost:3000/api/test pnpm exec tsx scripts/mcp-smoke.ts",
     "db:generate": "pnpx prisma generate",
     "db:migrate": "pnpx prisma migrate dev",
     "db:reset": "pnpx prisma migrate reset",
     "db:seed": "pnpx prisma db seed"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "clsx": "^2.1.1",
@@ -24,7 +27,8 @@
     "pg": "^8.22.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-syntax-highlighter": "^15.6.1"
+    "react-syntax-highlighter": "^15.6.1",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

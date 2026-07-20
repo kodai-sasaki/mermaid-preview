@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "nextjs-db-uploader": {
+      "command": "pnpm",
+      "args": ["exec", "tsx", "scripts/mcp-server.ts"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "NEXTJS_API_URL": "http://localhost:3000/api/document"
+      }
+    }
+  }
+}
