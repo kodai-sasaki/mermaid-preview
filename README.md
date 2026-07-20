@@ -14,7 +14,16 @@ $ pnpm i
 $ pnpm dev
 ```
 
-2. 疎通テストを実行する
+2. データベースの初期設定をする
+```sh
+$ docker compose up db -d
+$ pnpm db:generate
+$ pnpm db:migrate
+# テストデータを注入する場合
+$ pnpm db:seed
+```
+
+4. 疎通テストを実行する
 
 ```sh
 $ pnpm mcp:smoke
