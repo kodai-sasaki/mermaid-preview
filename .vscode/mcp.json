@@ -1,12 +1,14 @@
 {
   "servers": {
     "nextjs-db-uploader": {
-      "command": "pnpm",
-      "args": ["exec", "tsx", "scripts/mcp-server.ts"],
+      "command": "zsh",
+      "args": ["-l", "-c", "mise run mcp:dev"],
       "cwd": "${workspaceFolder}",
       "env": {
         "NEXTJS_API_URL": "http://localhost:3000/api/document"
-      }
+      },
+      "type": "stdio"
     }
-  }
+  },
+  "inputs": []
 }
