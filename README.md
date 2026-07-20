@@ -23,7 +23,7 @@ $ pnpm db:migrate
 $ pnpm db:seed
 ```
 
-4. 疎通テストを実行する
+3. 疎通テストを実行する
 
 ```sh
 $ pnpm mcp:smoke
